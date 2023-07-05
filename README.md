@@ -1,4 +1,4 @@
-# crownbattles
+# Crown Battles
 
 This a simulation made for all possible gameplays in the board game Crown Battles.
 
