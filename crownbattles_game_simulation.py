@@ -149,17 +149,19 @@ num_cards_for_the_round_dict[8] = [1,2,3,4,5,6,7]               # 8-players
 # How many times did a player meet the target? i.e win exactly 2 tricks
 count_target_met = 0   
 # Target of the game
-target_tricks_won = 2
+target_tricks_won_list = [0,1,2,3,4]
 
 for num_players in num_players_list:
     for num_cards_for_the_round in num_cards_for_the_round_dict[num_players]:
-        for i in range(num_simulations):
-            player1_tricks_won = play_game(num_players, num_cards_for_the_round)
-            
-            if player1_tricks_won == target_tricks_won:
-                count_target_met += 1
+        for target_tricks_won in target_tricks_won_list:
+            for i in range(num_simulations):
+                player1_tricks_won = play_game(num_players, num_cards_for_the_round)
+                
+                if player1_tricks_won == target_tricks_won:
+                    count_target_met += 1
 
-        probability = count_target_met / num_simulations
-        print(f"The probability of winning exactly 2 tricks in a {num_players}-player game \
-            each having {num_cards_for_the_round} cards on hand is: {probability*100:.2f}%")
-        count_target_met = 0 # reset the number of target was met variable in the game
+            probability = count_target_met / num_simulations
+            print(f"The probability of winning exactly {target_tricks_won} tricks " \
+                  f"in a {num_players}-player game " \
+                f"each having {num_cards_for_the_round} cards on hand is: {probability*100:.2f}%")
+            count_target_met = 0 # reset the number of target was met variable in the game
