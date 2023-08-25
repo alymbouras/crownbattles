@@ -137,6 +137,10 @@ def play_game(num_players, num_cards_for_the_round):
 
 num_simulations = 100
 num_players_list = [2,3,4,5,6,7,8]
+# How many times did a player meet the target? i.e win exactly 2 tricks
+count_target_met = 0   
+# Target of the game
+target_tricks_won_list = [0,1,2,3,4]
 # Key is the number of players, value is a list of the cards to deal on each round
 num_cards_for_the_round_dict = {} 
 num_cards_for_the_round_dict[2] = [2,4,6,8,10,12,14,16,18,20]   # 2-players
@@ -146,10 +150,6 @@ num_cards_for_the_round_dict[5] = [1,2,3,4,5,6,7,8,9,10,11,12]  # 5-players
 num_cards_for_the_round_dict[6] = [1,2,3,4,5,6,7,8,9,10]        # 6-players
 num_cards_for_the_round_dict[7] = [1,2,3,4,5,6,7,8]             # 7-players
 num_cards_for_the_round_dict[8] = [1,2,3,4,5,6,7]               # 8-players
-# How many times did a player meet the target? i.e win exactly 2 tricks
-count_target_met = 0   
-# Target of the game
-target_tricks_won_list = [0,1,2,3,4]
 
 for num_players in num_players_list:
     for num_cards_for_the_round in num_cards_for_the_round_dict[num_players]:
