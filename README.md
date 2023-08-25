@@ -20,6 +20,6 @@ num_cards_for_the_round_dict[7] = [1,2,3,4,5,6,7,8]             # 7-players
 num_cards_for_the_round_dict[8] = [1,2,3,4,5,6,7]               # 8-players
 
 
-The current **target** is set for the player to make 2 tricks in a game. However, it was tested for all the possible missions.
+The current **target** is set for the player to make [0,1,2,3,4] tricks in a game. However, it was tested for all the possible missions.
 
-The program gives the possibility of achieving the **target** outcome.
+The program gives the possibility of achieving the **target** outcome for all the possible gameplays mentioned above.
